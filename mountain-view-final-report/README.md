@@ -173,7 +173,7 @@ Some addresses had what I was told are "illegal driveways." An example of this i
 See [tree-counts/tree-counts.xlsx](../tree-counts/tree-counts.xlsx) for the final counts, along with address-specific notes, where relevant.
 
 ### Overall environmental impact
-Across our 30 addresses, there were effective (accounting for double-counting issues) trees in driveway sight triangles in total. This comes out to an average of 0.5888889 trees per property address. Given that Mountain View has 16839 property addresses, **we estimate that 9,916 trees could be affected by Mountain View's driveway sight triangle policy.**
+Across our 30 addresses, there were effective (accounting for double-counting issues) trees in driveway sight triangles in total. This comes out to an average of 0.5888889 trees per property address. Given that Mountain View has 16839 property addresses, **we estimate that 9,916 trees could be affected by Mountain View's driveway sight triangle policy.** Note that this policy could also prevent additional trees from being planted in the future.
 
 Future work may involve calculating the benefits of keeping these trees. In no particular order, this may include, but is not limited to:
 - heat reduction (urban heat island effect)
