@@ -20,7 +20,7 @@ This summer, the majority of my work with Mountain View consisted of analyzing t
 ---
 
 ## Pedestrian safety analysis
-__Summary: Visibility issues in driveway sight triangles in Mountain View may be associated with up to an average of 1.7 crashes per year (1.6 for high-volume triangles; 0.1 which are unclear: either low or high-volume).__
+__Summary: Visibility issues in driveway sight triangles in Mountain View may be associated with up to an average of 1.7 crashes per year (1.6 for high-volume triangles; 0.1 for low-volume triangles).__
 
 ### Obtaining a spreadsheet of crash data
 After creating a free account, I downloaded crash data from UC Berkeley's [Transportation Injury Mapping System (TIMS)](https://tims.berkeley.edu/tools/query/) with the following filters applied:
@@ -43,7 +43,7 @@ The files in [relevance-polygons](../relevance-polygons) contain the very rough 
 
 We received data for 68 of these crashes. We did not receive data for the crash with TIMS Case ID 6266634 (requested in batch 3). I will look into this during fall quarter AY 2022–2023.
 
-The files [data/full-crash-spreadsheet.csv](../data/full-crash-spreadsheet.csv), [data/high-volume-crash-spreadsheet.csv](../data/high-volume-crash-spreadsheet.csv), and [data/unclear-crash-spreadsheet.csv](../data/unclear-crash-spreadsheet.csv) each have MVPD case numbers in addition to any potential discrepancies between the TIMS and MVPD data noted in the columns MV_CASE and TIMS_MV_DISCREPANCIES, respectively. Note that these columns only have values for the 68 crashes we received data for; otherwise, they are left blank.
+The files [data/full-crash-spreadsheet.csv](../data/full-crash-spreadsheet.csv), [data/high-volume-crash-spreadsheet.csv](../data/high-volume-crash-spreadsheet.csv), and [data/low-volume-crash-spreadsheet.csv](../data/low-volume-crash-spreadsheet.csv) each have MVPD case numbers in addition to any potential discrepancies between the TIMS and MVPD data noted in the columns MV_CASE and TIMS_MV_DISCREPANCIES, respectively. Note that these columns only have values for the 68 crashes we received data for; otherwise, they are left blank.
 
 ### Figuring out which crashes could be associated with driveways
 We manually read the crash reports for the 68 potential driveway crashes to scan them for any references to driveways. 23 of the summaries appear to be associated with driveways, averaging 2.3 crashes per year (over 10 years):
@@ -58,7 +58,7 @@ We manually read the crash reports for the 68 potential driveway crashes to scan
 | 18-01794 | 8610107 | Complaint of pain | A driver hit a pedestrian while exiting a shopping center |
 | 18-06298 | 8711012 | Other visible | A driver hit a pedestrian while exiting a parking lot after making a complete stop |
 | 19-02185 | 8833159 | Complaint of pain | A driver hit two pedestrians wearing dark clothing while turning left into a driveway during dark and rainy weather |
-| 19-03788 | 8878802 | Complaint of pain | A driver hit a pedestrian while backing out of a driveway where large hedges blocked the driver's view. It is unclear whether the driver was exiting a 27-unit ([source: apartmentguide.com](https://www.apartmentguide.com/apartments/California/Mountain-View/Calderon-Apartments/100014157/)) apartment complex or a nearby single-family residence. |
+| 19-03788 | 8878802 | Complaint of pain | A driver hit a pedestrian while backing out of a driveway where large hedges blocked the driver's view. Correspondence with MVPD clarified that this took place in a low-volume area. |
 | 19-08606 | 9008827 | Complaint of pain | A driver hit a pedestrian while making an unsafe turn into a parking lot |
 | 15-06663 | 7110585 | Complaint of pain | A driver hit a pedestrian while turning right out of a parking lot |
 | 16-05415 | 8113146 | Complaint of pain | A driver hit a pedestrian in a wheelchair while turning right to exit a shopping center |
@@ -74,7 +74,7 @@ We manually read the crash reports for the 68 potential driveway crashes to scan
 | 17-08533 | 8537113 | Severe injury | A driver hit a pedestrian who was helping a second vehicle exit a driveway |
 | 18-07705 | 8749365 | Complaint of pain | A driver hit a pedestrian while exiting a parking lot |
 
-Out of these 23 driveway crashes, we wanted to know how many could be directly associated with an obstruction of vision in driveway sight triangles. We excluded crashes where drivers were entering driveways, in addition to any other crashes where exit visibility would not have been an issue. This left us with 17 crashes (an average of 1.7 per year). At this stage, we also grouped crashes by whether they occurred at a high-volume area (commercial/retail areas and residential areas with >20 units) or a low-volume area (residential areas with ≤20 units). This distinction is important, as Mountain View's driveway sight triangles are different at each of these types of locations. At least 16 crashes appear to have occurred at high-volume locations. For one case, it is unclear from the information available whether it occurred at a high or low-volume location.
+Out of these 23 driveway crashes, we wanted to know how many could be directly associated with an obstruction of vision in driveway sight triangles. We excluded crashes where drivers were entering driveways, in addition to any other crashes where exit visibility would not have been an issue. This left us with 17 crashes (an average of 1.7 per year). At this stage, we also grouped crashes by whether they occurred at a high-volume area (commercial/retail areas and residential areas with >20 units) or a low-volume area (residential areas with ≤20 units). This distinction is important, as Mountain View's driveway sight triangles are different at each of these types of locations. 16 crashes appear to have occurred at high-volume locations, and one appears to have occurred at a low-volume location.
 
 #### High-volume cases (16; ~6.5% of crashes involving pedestrians):
 | MVPD Case Number | TIMS Case ID | Severity | Notes |
@@ -98,15 +98,12 @@ Out of these 23 driveway crashes, we wanted to know how many could be directly a
 
 See [data/high-volume-crash-spreadsheet.csv](../data/high-volume-crash-spreadsheet.csv).
 
-#### Unclear cases (could be either high-volume or low-volume) (1; ~0.4% of crashes involving pedestrians):
+#### Low-volume cases (1; ~0.4% of crashes involving pedestrians)
 | MVPD Case Number | TIMS Case ID | Severity | Notes |
 | --- | --- | --- | --- |
-| 19-03788 | 8878802 | Complaint of pain | A driver hit a pedestrian while backing out of a driveway where large hedges blocked the driver's view. It is unclear whether the driver was exiting a 27-unit ([source: apartmentguide.com](https://www.apartmentguide.com/apartments/California/Mountain-View/Calderon-Apartments/100014157/)) apartment complex or a nearby single-family residence. |
+| 19-03788 | 8878802 | Complaint of pain | A driver hit a pedestrian while backing out of a driveway where large hedges blocked the driver's view. Correspondence with MVPD clarified that this took place in a low-volume area. |
 
-See [data/unclear-crash-spreadsheet.csv](../data/unclear-crash-spreadsheet.csv).
-
-#### Low-volume cases (0; 0% of crashes involving pedestrians)
-N/A: we did not identify any crashes that were clearly low-volume cases. See above for the singular case that could have been either low-volume or high-volume.
+See [data/low-volume-crash-spreadsheet.csv](../data/low-volume-crash-spreadsheet.csv).
 
 #### Police report highlighter script
 At Mountain View's request, to make future work easier, I also created a Python script to highlight words in PDFs related to driveways. See [police-report-pdf-highlighter](../police-report-pdf-highlighter). This assumes that the police reports are all in text and part of the same PDF. This was the format of our crash reports.
@@ -235,7 +232,7 @@ Near the beginning of the summer, I also researched the policies of some selecte
 Outside of my primary work with Mountain View, I also worked on analyzing the overall TIMS data and on summarizing public input on various projects.
 
 ### TIMS data analysis
-I created a number of scripts to add additional information to the spreadsheet of TIMS data. [data/full-crash-spreadsheet.csv](../data/full-crash-spreadsheet.csv), [data/high-volume-crash-spreadsheet.csv](../data/high-volume-crash-spreadsheet.csv), and [data/unclear-crash-spreadsheet.csv](../data/unclear-crash-spreadsheet.csv) all have this additional information. This summer, I performed general analyses of the entire crash dataset. During fall quarter AY 2022–2023, I will analyze the driveway crashes specifically.
+I created a number of scripts to add additional information to the spreadsheet of TIMS data. [data/full-crash-spreadsheet.csv](../data/full-crash-spreadsheet.csv), [data/high-volume-crash-spreadsheet.csv](../data/high-volume-crash-spreadsheet.csv), and [data/low-volume-crash-spreadsheet.csv](../data/low-volume-crash-spreadsheet.csv) all have this additional information. This summer, I performed general analyses of the entire crash dataset. During fall quarter AY 2022–2023, I will analyze the driveway crashes specifically.
 
 #### Precipitation data
 [precipitation-data](../precipitation-data) adds precipitation/weather data (from Meteostat). Out of 245 total crashes, 243 had valid times in [data/full-crash-spreadsheet.csv](../data/full-crash-spreadsheet.csv). 11 of these 243 crashes were associated with precipitation.
